@@ -7,7 +7,7 @@
 
 ### Tính năng chính
 * **Đặt món (Ordering):** Xem menu và chọn món trực tuyến.
-* **Tích điểm (Loyalty):** Tích điểm sau mỗi hóa đơn để đổi quà.
+* **Tích điểm (Membership):** Tích điểm sau mỗi hóa đơn để đổi quà.
 
 ### Công nghệ sử dụng
 * **Ngôn ngữ:** Java (Android).
