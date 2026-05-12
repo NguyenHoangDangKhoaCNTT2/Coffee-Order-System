@@ -1,9 +1,9 @@
 # Xây dựng ứng dụng đặt món và tích điểm cho cửa hàng Coffee
 ### Thông tin đề tài
 * **Sinh viên thực hiện:** Nguyễn Hoàng Đăng Khoa
-* **MSSV:** [65131500]
-* **Lớp:** [65.CNTT-2]
-* **Giảng viên hướng dẫn:** [Mai Cường Thọ]
+* **MSSV:** 65131500.
+* **Lớp:** 65.CNTT-2.
+* **Giảng viên hướng dẫn:** Mai Cường Thọ.
 
 ### Tính năng chính
 * **Đặt món (Ordering):** Xem menu và chọn món trực tuyến.
