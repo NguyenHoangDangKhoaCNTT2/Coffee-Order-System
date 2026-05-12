@@ -6,8 +6,8 @@
 * **Giảng viên hướng dẫn:** [Mai Cường Thọ]
 
 ### Tính năng chính
-**Đặt món (Ordering):** Xem menu và chọn món trực tuyến.
-**Tích điểm (Loyalty):** Tích điểm sau mỗi hóa đơn để đổi quà.
+* **Đặt món (Ordering):** Xem menu và chọn món trực tuyến.
+* **Tích điểm (Loyalty):** Tích điểm sau mỗi hóa đơn để đổi quà.
 
 ### Công nghệ sử dụng
 * **Ngôn ngữ:** Java (Android).
