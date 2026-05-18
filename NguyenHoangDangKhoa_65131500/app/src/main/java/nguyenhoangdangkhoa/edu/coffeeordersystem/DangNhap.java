@@ -46,6 +46,10 @@ public class DangNhap extends AppCompatActivity {
                     Toast.makeText(DangNhap.this, "Vui lòng nhập đủ số điện thoại và mật khẩu!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(DangNhap.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(DangNhap.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });
