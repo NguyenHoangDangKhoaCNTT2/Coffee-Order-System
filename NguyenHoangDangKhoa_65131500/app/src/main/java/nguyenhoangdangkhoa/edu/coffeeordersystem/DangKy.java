@@ -1,5 +1,6 @@
 package nguyenhoangdangkhoa.edu.coffeeordersystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +47,17 @@ public class DangKy extends AppCompatActivity {
                     Toast.makeText(DangKy.this, "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(DangKy.this, "Đăng ký thành công!", Toast.LENGTH_SHORT).show();
+
+                    android.content.SharedPreferences sharedPreferences = getSharedPreferences("USER_DATA", android.content.Context.MODE_PRIVATE);
+                    android.content.SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                    String stringHoTen = edtDKHoTen.getText().toString().trim();
+                    String stringSdt = edtDKSDT.getText().toString().trim();
+                    editor.putString("luu_ho_ten", stringHoTen);
+                    editor.putString("luu_so_dien_thoai", stringSdt);
+                    editor.apply();
+                    Intent intent = new Intent(DangKy.this, DangNhap.class);
+                    startActivity(intent);
                     finish();
                 }
             }
