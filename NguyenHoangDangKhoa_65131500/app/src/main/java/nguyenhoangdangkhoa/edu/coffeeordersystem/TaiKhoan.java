@@ -3,6 +3,7 @@ package nguyenhoangdangkhoa.edu.coffeeordersystem;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ public class TaiKhoan extends Fragment {
 
     private TextView txtTenNguoiDung, txtSdtNguoiDung;
     private Button btnDangXuat;
+    private MyDatabase dbHelper;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -24,20 +26,27 @@ public class TaiKhoan extends Fragment {
         txtTenNguoiDung = view.findViewById(R.id.txtTenNguoiDung);
         txtSdtNguoiDung = view.findViewById(R.id.txtSdtNguoiDung);
         btnDangXuat = view.findViewById(R.id.btnDangXuat);
+        dbHelper = new MyDatabase(getActivity());
 
         if (getActivity() != null) {
             SharedPreferences sharedPreferences = getActivity().getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
-            String hoTenUser = sharedPreferences.getString("luu_ho_ten", "Chưa cập nhật");
-            String sdtUser = sharedPreferences.getString("luu_so_dien_thoai", "Chưa cập nhật");
+            String sdtHienTai = sharedPreferences.getString("sdt_dang_nhap", "");
 
-            txtTenNguoiDung.setText("Họ và tên: " + hoTenUser);
-            txtSdtNguoiDung.setText("Số điện thoại: " + sdtUser);
+            Cursor cursor = dbHelper.getThongTinNguoiDung(sdtHienTai);
+            if (cursor != null && cursor.moveToFirst()) {
+                String hoTenTuSQL = cursor.getString(1);
+                String sdtTuSQL = cursor.getString(0);
+
+                txtTenNguoiDung.setText("Họ và tên: " + hoTenTuSQL);
+                txtSdtNguoiDung.setText("Số điện thoại: " + sdtTuSQL);
+                cursor.close();
+            }
         }
 
         btnDangXuat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Đã đăng xuất tài khoản!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Đã đăng xuất!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), DangNhap.class);
                 startActivity(intent);
                 if (getActivity() != null) {

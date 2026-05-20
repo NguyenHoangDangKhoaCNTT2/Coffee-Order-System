@@ -16,12 +16,15 @@ public class DangKy extends AppCompatActivity {
     EditText edtDKHoTen, edtDKSDT, edtDKMatKhau;
     Button btnDangKy;
     TextView txtQuayLaiDangNhap;
+    MyDatabase dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dang_ky);
+
+        dbHelper = new MyDatabase(DangKy.this);
 
         edtDKHoTen = findViewById(R.id.edtDKHoTen);
         edtDKSDT = findViewById(R.id.edtDKSDT);
@@ -46,19 +49,17 @@ public class DangKy extends AppCompatActivity {
                 if(hoTen.equals("") || sdt.equals("") || matKhau.equals("")) {
                     Toast.makeText(DangKy.this, "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(DangKy.this, "Đăng ký thành công!", Toast.LENGTH_SHORT).show();
 
-                    android.content.SharedPreferences sharedPreferences = getSharedPreferences("USER_DATA", android.content.Context.MODE_PRIVATE);
-                    android.content.SharedPreferences.Editor editor = sharedPreferences.edit();
+                    boolean checkInsert = dbHelper.insertNguoiDung(sdt, hoTen, matKhau);
 
-                    String stringHoTen = edtDKHoTen.getText().toString().trim();
-                    String stringSdt = edtDKSDT.getText().toString().trim();
-                    editor.putString("luu_ho_ten", stringHoTen);
-                    editor.putString("luu_so_dien_thoai", stringSdt);
-                    editor.apply();
-                    Intent intent = new Intent(DangKy.this, DangNhap.class);
-                    startActivity(intent);
-                    finish();
+                    if (checkInsert) {
+                        Toast.makeText(DangKy.this, "Đăng ký thành công!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(DangKy.this, DangNhap.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Toast.makeText(DangKy.this, "Số điện thoại này đã được đăng ký!", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
