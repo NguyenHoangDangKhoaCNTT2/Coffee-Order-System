@@ -21,6 +21,7 @@ public class TrangChu extends Fragment {
     private TextView[] txtGiaMonArray = new TextView[15];
     private Button[] btnMuaMonArray = new Button[15];
     private int soLuongHienTai = 1;
+    private String sdtHienTai = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,13 +32,15 @@ public class TrangChu extends Fragment {
 
         if (getActivity() != null) {
             SharedPreferences sharedPreferences = getActivity().getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
-            String sdtHienTai = sharedPreferences.getString("sdt_dang_nhap", "");
+            sdtHienTai = sharedPreferences.getString("sdt_dang_nhap", "");
 
             Cursor cursorUser = dbHelper.getThongTinNguoiDung(sdtHienTai);
             if (cursorUser != null && cursorUser.moveToFirst()) {
                 String hoTenTuSQL = cursorUser.getString(1);
-                txtNguoiDung.setText("Chào bạn, " + hoTenTuSQL + " 👋");
+                txtNguoiDung.setText("Chào bạn " + hoTenTuSQL + "!");
                 cursorUser.close();
+            } else {
+                txtNguoiDung.setText("Chào bạn!");
             }
         }
 
@@ -128,11 +131,13 @@ public class TrangChu extends Fragment {
             @Override
             public void onClick(View v) {
                 if (getActivity() != null) {
-                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
-                    String sdtHienTai = sharedPreferences.getString("sdt_dang_nhap", "");
+                    if (sdtHienTai == null || sdtHienTai.isEmpty()) {
+                        Toast.makeText(getActivity(), "Bạn cần đăng nhập/đăng ký để đặt nước!", Toast.LENGTH_LONG).show();
+                        bottomSheetDialog.dismiss();
+                        return;
+                    }
 
                     dbHelper.themHoacCapNhatGioHang(sdtHienTai, tenMon, soLuongHienTai, giaMon);
-
                     String message = "Đã thêm " + soLuongHienTai + " x " + tenMon + " vào giỏ hàng!";
                     Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                     bottomSheetDialog.dismiss();

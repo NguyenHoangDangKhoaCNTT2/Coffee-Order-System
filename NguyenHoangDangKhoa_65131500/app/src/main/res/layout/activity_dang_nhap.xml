@@ -8,21 +8,26 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:gravity="center"
-    tools:context=".DangNhap">
+    tools:context=".DangNhap"
+    android:background="@drawable/bg_cf">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="K COFFEE"
+        android:layout_marginBottom="30dp"
+        android:text="ĐĂNG NHẬP"
+        android:textColor="#FFFFFF"
         android:textSize="28sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="30dp"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtSDT"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="Nhập Số điện thoại"
+        android:hint="Nhập số điện thoại"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
         android:inputType="phone"
         android:layout_marginVertical="10dp"/>
 
@@ -30,7 +35,10 @@
         android:id="@+id/edtMatKhau"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="Nhập Mật khẩu"
+        android:hint="Nhập mật khẩu"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
         android:inputType="textPassword"
         android:layout_marginVertical="10dp"/>
 

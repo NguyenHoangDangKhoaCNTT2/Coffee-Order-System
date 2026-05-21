@@ -36,37 +36,45 @@ public class TichDiem extends Fragment {
         if (getActivity() != null) {
             SharedPreferences sharedPreferences = getActivity().getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
             sdtHienTai = sharedPreferences.getString("sdt_dang_nhap", "");
-
-            taiSoDiemHienTai();
         }
 
-        lnDoiVoucher10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                yeuCauXacNhanDoiQua("Voucher giảm 10%", 20);
-            }
-        });
+        if (sdtHienTai == null || sdtHienTai.isEmpty()) {
+            txtDiemTichLuy.setText("Đăng nhập/Đăng ký để được tích điểm");
+            txtDiemTichLuy.setTextSize(16);
 
-        lnDoiVoucher30.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                yeuCauXacNhanDoiQua("Voucher giảm 30%", 40);
-            }
-        });
+            View.OnClickListener clickKhach = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getActivity(), "Vui lòng đăng nhập để sử dụng tính năng đổi thưởng!", Toast.LENGTH_SHORT).show();
+                }
+            };
+            lnDoiVoucher10.setOnClickListener(clickKhach);
+            lnDoiVoucher30.setOnClickListener(clickKhach);
+            lnDoiVoucher50.setOnClickListener(clickKhach);
+            lnDoiVoucherCafe.setOnClickListener(clickKhach);
+        } else {
+            taiSoDiemHienTai();
 
-        lnDoiVoucher50.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                yeuCauXacNhanDoiQua("Voucher giảm 50%", 70);
-            }
-        });
+            lnDoiVoucher10.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) { yeuCauXacNhanDoiQua("Voucher giảm 10%", 20); }
+            });
 
-        lnDoiVoucherCafe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                yeuCauXacNhanDoiQua("Voucher FREE Cà Phê Muối", 100);
-            }
-        });
+            lnDoiVoucher30.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) { yeuCauXacNhanDoiQua("Voucher giảm 30%", 40); }
+            });
+
+            lnDoiVoucher50.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) { yeuCauXacNhanDoiQua("Voucher giảm 50%", 70); }
+            });
+
+            lnDoiVoucherCafe.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) { yeuCauXacNhanDoiQua("Voucher FREE Cà Phê Muối", 100); }
+            });
+        }
 
         return view;
     }
@@ -93,8 +101,7 @@ public class TichDiem extends Fragment {
             }
         });
 
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        builder.create().show();
     }
 
     private void xulyDoiUuDai(String tenVoucher, int soDiemCanTru) {
