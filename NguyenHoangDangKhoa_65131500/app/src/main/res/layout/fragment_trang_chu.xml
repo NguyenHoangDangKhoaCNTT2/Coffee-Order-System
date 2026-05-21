@@ -72,13 +72,15 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cà Phê Đen Đá"
+                        android:text="Cà Phê Đen"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="25.000 đ"
@@ -86,6 +88,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon1"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -113,13 +116,15 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cà Phê Sữa Đá"
+                        android:text="Cà Phê Sữa"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="29.000 đ"
@@ -127,6 +132,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon2"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -154,6 +160,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cà Phê Muối"
@@ -161,6 +168,7 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="35.000 đ"
@@ -168,6 +176,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon3"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -195,6 +204,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bạc Xỉu"
@@ -202,6 +212,7 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="32.000 đ"
@@ -209,6 +220,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon4"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -236,6 +248,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Matcha Latte"
@@ -243,6 +256,7 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="45.000 đ"
@@ -250,6 +264,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon5"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -277,6 +292,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Matcha Đá Xay"
@@ -284,13 +300,15 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="49.000 đ"
+                        android:text="50.000 đ"
                         android:textColor="#E53935"
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon6"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -318,6 +336,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Chocolate Đá Xay"
@@ -325,13 +344,15 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="49.000 đ"
+                        android:text="50.000 đ"
                         android:textColor="#E53935"
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon7"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -359,6 +380,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nước Cam Ép"
@@ -366,6 +388,7 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="35.000 đ"
@@ -373,6 +396,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon8"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -400,6 +424,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nước Dừa Tươi"
@@ -407,6 +432,7 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="30.000 đ"
@@ -414,6 +440,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon9"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -441,20 +468,23 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Trà Đào Hồng Hạc"
+                        android:text="Trà Đào Cam Xả"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="40.000 đ"
+                        android:text="35.000 đ"
                         android:textColor="#E53935"
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon10"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -482,6 +512,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Trà Trái Cây Nhiệt Đới"
@@ -489,6 +520,7 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="45.000 đ"
@@ -496,6 +528,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon11"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -523,20 +556,23 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sinh Tố Dâu Tây"
+                        android:text="Sinh Tố Dâu"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="42.000 đ"
+                        android:text="45.000 đ"
                         android:textColor="#E53935"
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon12"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -564,13 +600,15 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sinh Tố Bơ Sáp"
+                        android:text="Sinh Tố Bơ"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="45.000 đ"
@@ -578,6 +616,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon13"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -605,13 +644,15 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Bánh Flan Caramel"
+                        android:text="Kem Flan"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="20.000 đ"
@@ -619,6 +660,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon14"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"
@@ -646,6 +688,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="12dp">
                     <TextView
+                        android:id="@+id/txtTenMon15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Kem Bơ Đà Lạt"
@@ -653,13 +696,15 @@
                         android:textSize="16sp"
                         android:textColor="#333333"/>
                     <TextView
+                        android:id="@+id/txtGiaMon15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="39.000 đ"
+                        android:text="40.000 đ"
                         android:textColor="#E53935"
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/btnMuaMon15"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:text="Mua"

@@ -5,6 +5,10 @@
         android:icon="@drawable/ic_trang_chu"
         android:title="Trang chủ" />
     <item
+        android:id="@+id/itGioHang"
+        android:icon="@drawable/ic_gio_hang"
+        android:title="Giỏ hàng" />
+    <item
         android:id="@+id/itTichDiem"
         android:icon="@drawable/ic_tich_diem"
         android:title="Tích điểm" />

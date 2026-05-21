@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if (id == R.id.itTrangChu) {
                     fragmentDuocChon = new TrangChu();
+                } else if (id == R.id.itGioHang) {
+                    fragmentDuocChon = new GioHang();
                 } else if (id == R.id.itTichDiem) {
                     fragmentDuocChon = new TichDiem();
                 } else if (id == R.id.itLichSu) {

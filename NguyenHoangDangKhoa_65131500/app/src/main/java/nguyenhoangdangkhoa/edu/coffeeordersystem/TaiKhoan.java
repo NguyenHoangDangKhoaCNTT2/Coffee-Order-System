@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class TaiKhoan extends Fragment {
-
     private TextView txtTenNguoiDung, txtSdtNguoiDung;
     private Button btnDangXuat;
     private MyDatabase dbHelper;
@@ -32,24 +31,32 @@ public class TaiKhoan extends Fragment {
             SharedPreferences sharedPreferences = getActivity().getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
             String sdtHienTai = sharedPreferences.getString("sdt_dang_nhap", "");
 
+            txtSdtNguoiDung.setText("Số điện thoại: " + sdtHienTai);
+
             Cursor cursor = dbHelper.getThongTinNguoiDung(sdtHienTai);
             if (cursor != null && cursor.moveToFirst()) {
-                String hoTenTuSQL = cursor.getString(1);
-                String sdtTuSQL = cursor.getString(0);
+                String hoTen = cursor.getString(1);
 
-                txtTenNguoiDung.setText("Họ và tên: " + hoTenTuSQL);
-                txtSdtNguoiDung.setText("Số điện thoại: " + sdtTuSQL);
+                txtTenNguoiDung.setText("Họ và tên: " + hoTen);
+
                 cursor.close();
+            } else {
+                txtTenNguoiDung.setText("Họ và tên: Khách hàng");
             }
         }
 
         btnDangXuat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Đã đăng xuất!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(), DangNhap.class);
-                startActivity(intent);
                 if (getActivity() != null) {
+                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.clear();
+                    editor.apply();
+
+                    Toast.makeText(getActivity(), "Đã đăng xuất!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(), DangNhap.class);
+                    startActivity(intent);
                     getActivity().finish();
                 }
             }
