@@ -11,5 +11,5 @@
 
 ### Công nghệ sử dụng
 * **Ngôn ngữ:** Java (Android).
-* **Database:** Firebase / SQLite.
+* **Database:** SQLite.
 * **Công cụ:** Android Studio.
