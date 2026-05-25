@@ -1,4 +1,4 @@
-# Xây dựng ứng dụng đặt món và tích điểm cho cửa hàng Coffee
+# Xây dựng ứng dụng đặt món và tích điểm cho cửa hàng K Coffee
 ### Thông tin đề tài
 * **Giảng viên hướng dẫn:** Mai Cường Thọ.
 * **Sinh viên thực hiện:** Nguyễn Hoàng Đăng Khoa
@@ -11,5 +11,5 @@
 
 ### Công nghệ sử dụng
 * **Ngôn ngữ:** Java (Android).
-* **Database:** Firebase / SQLite.
+* **Database:** SQLite.
 * **Công cụ:** Android Studio.
