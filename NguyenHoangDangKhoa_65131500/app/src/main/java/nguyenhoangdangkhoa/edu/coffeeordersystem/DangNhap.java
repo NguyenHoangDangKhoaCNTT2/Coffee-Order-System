@@ -54,7 +54,6 @@ public class DangNhap extends AppCompatActivity {
                     if (checkLogin) {
                         Toast.makeText(DangNhap.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
 
-
                         android.content.SharedPreferences sharedPreferences = getSharedPreferences("USER_DATA", android.content.Context.MODE_PRIVATE);
                         android.content.SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("sdt_dang_nhap", phone);

@@ -9,15 +9,6 @@
     tools:context=".DangKy"
     android:background="@drawable/bg_cf">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TẠO TÀI KHOẢN"
-        android:textColor="#FFFFFF"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="30dp"/>
-
     <EditText
         android:id="@+id/edtDKHoTen"
         android:layout_width="match_parent"

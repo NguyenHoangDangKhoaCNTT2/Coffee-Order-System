@@ -11,7 +11,7 @@ import java.util.Locale;
 
 public class MyDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "KCoffee.db";
-    private static final int DATABASE_VERSION = 14;
+    private static final int DATABASE_VERSION = 15;
 
     private static final String TABLE_NGUOI_DUNG = "NguoiDung";
     private static final String COL_SDT = "sodienthoai";
