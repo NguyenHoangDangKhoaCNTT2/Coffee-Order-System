@@ -72,7 +72,7 @@ public class TichDiem extends Fragment {
 
             lnDoiVoucherCafe.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) { yeuCauXacNhanDoiQua("Voucher FREE Cà Phê Muối", 100); }
+                public void onClick(View v) { yeuCauXacNhanDoiQua("Voucher Free Cà Phê Muối", 100); }
             });
         }
 

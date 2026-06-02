@@ -98,7 +98,7 @@ public class GioHang extends Fragment {
                 @Override
                 public void onClick(View v) {
                     if (tongTienGoc == 0) {
-                        Toast.makeText(getActivity(), "Hãy thêm món vào giỏ trước khi chọn voucher nhé!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Hãy thêm món vào giỏ trước khi chọn voucher!", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     moBottomSheetChonVoucher(sdtHienTai);
