@@ -13,3 +13,6 @@
 * **Ngôn ngữ:** Java (Android).
 * **Database:** SQLite.
 * **Công cụ:** Android Studio.
+
+### Video thuyết trình dự án
+[**Xem Video Thuyết Trình Dự Án K Coffee tại đây**](https://drive.google.com/file/d/19yemfE0QYmBPbzUl6RADEgklPJKxI0GR/view?usp=sharing)
